@@ -65,7 +65,7 @@ tasks.withType<KotlinCompile> {
 
 tasks.withType<Jar> {
     manifest {
-        attributes["Main-Class"] = "cn.echoverse.auther.AutherApplicationKt"
+        attributes["Main-Class"] = "cn.echoverse.auther.AutherApplication"
     }
 }
 
