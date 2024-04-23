@@ -11,7 +11,11 @@ group = "cn.echoverse"
 version = "0.0.1-SNAPSHOT"
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_19
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+    manifest {
+        attributes["Main-Class"] = "cn.echoverse.auther.AutherApplicationKt"
+    }
 }
 
 configurations {
@@ -59,12 +63,6 @@ tasks.withType<KotlinCompile> {
     kotlinOptions {
         freeCompilerArgs += "-Xjsr305=strict"
         jvmTarget = "19"
-    }
-}
-
-tasks.withType<Jar> {
-    manifest {
-        attributes["Main-Class"] = "cn.echoverse.auther.AutherApplicationKt"
     }
 }
 
