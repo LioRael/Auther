@@ -11,7 +11,7 @@ group = "cn.echoverse"
 version = "0.0.1-SNAPSHOT"
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_17
+    sourceCompatibility = JavaVersion.VERSION_19
 }
 
 configurations {
@@ -58,15 +58,15 @@ dependencyManagement {
 tasks.withType<KotlinCompile> {
     kotlinOptions {
         freeCompilerArgs += "-Xjsr305=strict"
-        jvmTarget = "17"
+        jvmTarget = "19"
     }
 }
 
-tasks.withType<Jar> {
-    manifest {
-        attributes["Main-Class"] = "cn.echoverse.auther.AutherApplicationKt"
-    }
-}
+//tasks.withType<Jar> {
+//    manifest {
+//        attributes["Main-Class"] = "cn.echoverse.auther.AutherApplicationKt"
+//    }
+//}
 
 tasks.withType<Test> {
     useJUnitPlatform()
