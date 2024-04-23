@@ -62,6 +62,13 @@ tasks.withType<KotlinCompile> {
     }
 }
 
+tasks.withType<Jar> {
+    enabled = false
+    manifest {
+        attributes["Main-Class"] = "cn.echoverse.auther.AutherApplicationKt"
+    }
+}
+
 tasks.withType<Test> {
     useJUnitPlatform()
 }
