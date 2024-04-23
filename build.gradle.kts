@@ -11,7 +11,7 @@ group = "cn.echoverse"
 version = "0.0.1-SNAPSHOT"
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_19
+    sourceCompatibility = JavaVersion.VERSION_17
 }
 
 configurations {
